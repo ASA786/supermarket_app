@@ -1,0 +1,6 @@
+Database name = MarketCMS
+Tables: 
+•	Account (Users personal Details)
+•	Products (Where items are stored)
+•	Cart (Where items in the cart is stored which is based on the user)
+•	Stock (Stock control for items)
