@@ -11,7 +11,7 @@ The Cate key are:
 6 = Drinks
 
 The Code column is the First 2 letters of the name and then a number. so for example Apples you would do AP1 
-and if you wanted to add different kind of apple for example GReen apple it would be AP2 since 1 is already taken.
+and if you wanted to add different kind of apple for example green apple it would be AP2 since 1 is already taken.
 
 for the images simply name the image, make sure you name them simple and exactly like the example im giving below, one word with the type of the image.
 
