@@ -1,1 +1,46 @@
 Item Name, Price and Image URL
+
+This is the SQL Query you need:
+
+The Cate key are:
+1 = Fruits
+2 = Vegetables
+3 = Meat and Poultry
+4 = Fish and Seafood
+5 = Bakery
+6 = Drinks
+
+The Code column is the First 2 letters of the name and then a number. so for example Apples you would do AP1 
+and if you wanted to add different kind of apple for example GReen apple it would be AP2 since 1 is already taken.
+
+for the images simply name the image, make sure you name them simple and exactly like the example im giving below, one word with the type of the image.
+
+The price is double type, so 0.78 would be £0.78 self explantory really 
+
+INSERT INTO `products` (`name`, `cate`, `code`, `image`, `price`) VALUES ( 'Apples', 1, 'AP1', 'apples.jpeg', 0.78);
+
+
+
+EDIT UNDER THIS LINE
+
+1 = Fruits
+
+
+
+2 = Vegetables
+
+
+
+3 = Meat and Poultry
+
+
+
+4 = Fish and Seafood
+
+
+
+5 = Bakery
+
+
+
+6 = Drinks
