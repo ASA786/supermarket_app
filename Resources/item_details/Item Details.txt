@@ -45,14 +45,14 @@ EDIT UNDER THIS LINE
 ----------------------------------------------------------------------------------------------------------------------------
 --------------------------------------------------- 6 = Drinks -------------------------------------------------------------
 ----------------------------------------------------------------------------------------------------------------------------
-INSERT INTO `Drinks` (`name`, `cate`, `code`, `image`, `price`) VALUES ( 'Coke', 6, 'CK1', 'coke.jpeg', 1.00);
-INSERT INTO `Drinks` (`name`, `cate`, `code`, `image`, `price`) VALUES ( 'Fanta', 6, 'FN1', 'fanta.jpeg', 1.20);
-INSERT INTO `Drinks` (`name`, `cate`, `code`, `image`, `price`) VALUES ( 'Sprite', 6, 'SP1', 'sprite.jpeg', 1.27);
-INSERT INTO `Drinks` (`name`, `cate`, `code`, `image`, `price`) VALUES ( 'Redbull', 6, 'RB1', 'redbull.jpeg', 2.00);
-INSERT INTO `Drinks` (`name`, `cate`, `code`, `image`, `price`) VALUES ( 'Nurishment', 6, 'NM1', 'nurish-choc.jpeg', 1.35);
-INSERT INTO `Drinks` (`name`, `cate`, `code`, `image`, `price`) VALUES ( 'Nurishment', 6, 'NM2', 'nurish-vanilla.jpeg', 1.35);
-INSERT INTO `Drinks` (`name`, `cate`, `code`, `image`, `price`) VALUES ( 'Nurishment', 6, 'NM3', 'nurish-strawberry.jpeg', 1.35);
-INSERT INTO `Drinks` (`name`, `cate`, `code`, `image`, `price`) VALUES ( 'Lucozade', 6, 'LZ1', 'lucozade.jpeg', 1.50);
-INSERT INTO `Drinks` (`name`, `cate`, `code`, `image`, `price`) VALUES ( 'J2o', 6, 'J21', 'j2o.jpeg', 1.35);
-INSERT INTO `Drinks` (`name`, `cate`, `code`, `image`, `price`) VALUES ( 'freeway', 6, 'FW1', 'freeway.jpeg', 0.35);
+INSERT INTO `products` (`name`, `cate`, `code`, `image`, `price`) VALUES ( 'Coke', 6, 'CK1', 'coke.jpeg', 1.00);
+INSERT INTO `products` (`name`, `cate`, `code`, `image`, `price`) VALUES ( 'Fanta', 6, 'FN1', 'fanta.jpeg', 1.20);
+INSERT INTO `products` (`name`, `cate`, `code`, `image`, `price`) VALUES ( 'Sprite', 6, 'SP1', 'sprite.jpeg', 1.27);
+INSERT INTO `products` (`name`, `cate`, `code`, `image`, `price`) VALUES ( 'Redbull', 6, 'RB1', 'redbull.jpeg', 2.00);
+INSERT INTO `products` (`name`, `cate`, `code`, `image`, `price`) VALUES ( 'Nurishment Chocolate', 6, 'NM1', 'nurish-choc.jpeg', 1.35);
+INSERT INTO `products` (`name`, `cate`, `code`, `image`, `price`) VALUES ( 'Nurishment Vanilla', 6, 'NM2', 'nurish-vanilla.jpeg', 1.35);
+INSERT INTO `products` (`name`, `cate`, `code`, `image`, `price`) VALUES ( 'Nurishment Strawberry', 6, 'NM3', 'nurish-strawberry.jpeg', 1.35);
+INSERT INTO `products` (`name`, `cate`, `code`, `image`, `price`) VALUES ( 'Lucozade', 6, 'LZ1', 'lucozade.jpeg', 1.50);
+INSERT INTO `products` (`name`, `cate`, `code`, `image`, `price`) VALUES ( 'J2o', 6, 'J21', 'j2o.jpeg', 1.35);
+INSERT INTO `products` (`name`, `cate`, `code`, `image`, `price`) VALUES ( 'Freeway', 6, 'FW1', 'freeway.jpeg', 0.35);
 
