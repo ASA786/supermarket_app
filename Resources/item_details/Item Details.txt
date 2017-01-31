@@ -69,3 +69,16 @@ INSERT INTO `products` (`name`, `cate`, `code`, `image`, `price`) VALUES ( 'Luco
 INSERT INTO `products` (`name`, `cate`, `code`, `image`, `price`) VALUES ( 'J2o', 6, 'J21', 'j2o.jpeg', 1.35);
 INSERT INTO `products` (`name`, `cate`, `code`, `image`, `price`) VALUES ( 'Freeway', 6, 'FW1', 'freeway.jpeg', 0.35);
 
+--------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------7 = Electronics--------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------
+INSERT INTO `products` (`name`, `cate`, `code`, `image`, `price`) VALUES ( 'Slow Cooker', 7, 'SL', 'George.jpeg', 10.00);
+INSERT INTO `products` (`name`, `cate`, `code`, `image`, `price`) VALUES ( 'Logitech Deskset', 7, 'LD', 'Logitechk.jpeg', 20.00);
+INSERT INTO `products` (`name`, `cate`, `code`, `image`, `price`) VALUES ( 'Wireless Mouse', 7, 'WM', 'Logitech.jpeg', 12.50);
+INSERT INTO `products` (`name`, `cate`, `code`, `image`, `price`) VALUES ( 'Beard Trimmer', 7, 'BT', 'Philips.jpeg', 74.96);
+INSERT INTO `products` (`name`, `cate`, `code`, `image`, `price`) VALUES ( 'Phillips Headphones', 7, 'PH', 'Phillips.jpeg', 30.00);
+INSERT INTO `products` (`name`, `cate`, `code`, `image`, `price`) VALUES ( 'iPhone Charge Cable', 7, 'IC', 'Polaroid.jpeg', 10.00);
+INSERT INTO `products` (`name`, `cate`, `code`, `image`, `price`) VALUES ( 'PS4 Slim', 7, 'PS', 'PS4.jpeg', 259.00);
+INSERT INTO `products` (`name`, `cate`, `code`, `image`, `price`) VALUES ( 'Toaster', 7, 'TO', 'Russell.jpeg', 35.00);
+INSERT INTO `products` (`name`, `cate`, `code`, `image`, `price`) VALUES ( 'Samsung Tab', 7, 'SM', 'Samsung.jpeg', 159.00);
+INSERT INTO `products` (`name`, `cate`, `code`, `image`, `price`) VALUES ( 'Sandisk', 7, 'SL', 'Sandisk.jpeg', 10.00);
