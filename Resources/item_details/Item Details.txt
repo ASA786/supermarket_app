@@ -23,7 +23,20 @@ INSERT INTO `products` (`name`, `cate`, `code`, `image`, `price`) VALUES ( 'Appl
 
 EDIT UNDER THIS LINE
 
-1 = Fruits
+--------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------1 = Fruits-------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------
+INSERT INTO `products` (`name`, `cate`, `code`, `image`, `price`) VALUES ( 'Apple', 1, 'AP1', 'apple.jpeg', 1.00);
+INSERT INTO `products` (`name`, `cate`, `code`, `image`, `price`) VALUES ( 'Banana', 1, 'BN1', 'banana.jpeg', 0.90);
+INSERT INTO `products` (`name`, `cate`, `code`, `image`, `price`) VALUES ( 'Cherries', 1, 'CH1', 'cherries.jpeg', 2.00);
+INSERT INTO `products` (`name`, `cate`, `code`, `image`, `price`) VALUES ( 'Grapefruit', 6, 'GF1', 'grapefruit.jpeg', 1.00);
+INSERT INTO `products` (`name`, `cate`, `code`, `image`, `price`) VALUES ( 'Grapes', 1, 'GR1', 'grapes.jpeg', 1.95);
+INSERT INTO `products` (`name`, `cate`, `code`, `image`, `price`) VALUES ( 'Mango', 1, 'MA1', 'mango.jpeg', 1.80);
+INSERT INTO `products` (`name`, `cate`, `code`, `image`, `price`) VALUES ( 'Orange', 1, 'OR1', 'orange.jpeg', 1.25);
+INSERT INTO `products` (`name`, `cate`, `code`, `image`, `price`) VALUES ( 'Pear', 1, 'PE1', 'pear.jpeg', 1.00);
+INSERT INTO `products` (`name`, `cate`, `code`, `image`, `price`) VALUES ( 'Pineapple', 1, 'PI1', 'pineapple.jpeg', 1.00);
+INSERT INTO `products` (`name`, `cate`, `code`, `image`, `price`) VALUES ( 'Strawberries', 1, 'ST1', 'strawberries.jpeg', 1.50);
+INSERT INTO `products` (`name`, `cate`, `code`, `image`, `price`) VALUES ( 'Watermelon', 1, 'WA1', 'watermelon.jpeg', 3.00);
 
 
 
