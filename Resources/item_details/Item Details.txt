@@ -82,3 +82,33 @@ INSERT INTO `products` (`name`, `cate`, `code`, `image`, `price`) VALUES ( 'PS4 
 INSERT INTO `products` (`name`, `cate`, `code`, `image`, `price`) VALUES ( 'Toaster', 7, 'TO', 'Russell.jpeg', 35.00);
 INSERT INTO `products` (`name`, `cate`, `code`, `image`, `price`) VALUES ( 'Samsung Tab', 7, 'SM', 'Samsung.jpeg', 159.00);
 INSERT INTO `products` (`name`, `cate`, `code`, `image`, `price`) VALUES ( 'Sandisk', 7, 'SL', 'Sandisk.jpeg', 10.00);
+
+------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------8 = Kids Toys-------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------
+INSERT INTO `products` (`name`, `cate`, `code`, `image`, `price`) VALUES ( 'LEGO City Fire Ladder', 8, 'LC', 'LEGOCityFireLadder.jpeg', 17.97);
+INSERT INTO `products` (`name`, `cate`, `code`, `image`, `price`) VALUES ( 'Bathtime Fun', 8, 'BF', 'LittleTikesBathtime.jpeg', 10.00);
+INSERT INTO `products` (`name`, `cate`, `code`, `image`, `price`) VALUES ( 'Little Tikes Hammer', 8, 'LH', 'LittleTikesHammer.jpeg', 6.00);
+INSERT INTO `products` (`name`, `cate`, `code`, `image`, `price`) VALUES ( 'Little Tikes Sunny Funflower 8, 'LF', 'LittleTikes.jpeg', 8.00);
+INSERT INTO `products` (`name`, `cate`, `code`, `image`, `price`) VALUES ( 'Baby In Car', 8, 'BC', 'MySweetBaby.jpeg', 10.00);
+INSERT INTO `products` (`name`, `cate`, `code`, `image`, `price`) VALUES ( 'NERF N-strike', 8, 'NS', 'NERF.jpeg', 10.00);
+INSERT INTO `products` (`name`, `cate`, `code`, `image`, `price`) VALUES ( 'Racing Car', 8, 'RC', 'Remote.jpeg', 60.00);
+INSERT INTO `products` (`name`, `cate`, `code`, `image`, `price`) VALUES ( 'Dipsy', 8, 'DI', 'Teletubbies.jpeg', 10.00);
+INSERT INTO `products` (`name`, `cate`, `code`, `image`, `price`) VALUES ( 'Van Caravan', 8, 'VC', 'Van.jpeg', 10.00);
+INSERT INTO `products` (`name`, `cate`, `code`, `image`, `price`) VALUES ( 'X Shot Zombie', 8, 'XS', 'XShot.jpeg', 10.00);
+
+------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------9 = Bed, Bath & Home-------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------
+
+INSERT INTO `products` (`name`, `cate`, `code`, `image`, `price`) VALUES ( 'Andrex Moist Toilet Tissue', 9, 'AN', 'AndrexWashletsClassic.jpeg', 1.50);
+INSERT INTO `products` (`name`, `cate`, `code`, `image`, `price`) VALUES ( 'Decorative Antique GLS Light Bulb', 9, 'DE', 'CrystaliteDecorative.jpeg', 3.00);
+INSERT INTO `products` (`name`, `cate`, `code`, `image`, `price`) VALUES ( 'Cotton Bath Towel', 9, 'CO', 'GeorgeHome1.jpeg', 4.00);
+INSERT INTO `products` (`name`, `cate`, `code`, `image`, `price`) VALUES ( 'Photo Frame', 9, 'PH', 'GeorgeHomeBaroque.jpeg', 2.50);
+INSERT INTO `products` (`name`, `cate`, `code`, `image`, `price`) VALUES ( 'Table Lamp', 9, 'TA', 'GeorgeHomeCream.jpeg', 5.00);
+INSERT INTO `products` (`name`, `cate`, `code`, `image`, `price`) VALUES ( 'Bed Duvet Set', 9, 'BE', 'GeorgeHomeGrey.jpeg', 25.00);
+INSERT INTO `products` (`name`, `cate`, `code`, `image`, `price`) VALUES ( 'Photo Album', 9, 'PH', 'GeorgeHomeMoments.jpeg', 4.00);
+INSERT INTO `products` (`name`, `cate`, `code`, `image`, `price`) VALUES ( 'Hollowfibre Pillows', 9, 'HO', 'GeorgeHomeSoftComfort.jpeg', 6.00);
+INSERT INTO `products` (`name`, `cate`, `code`, `image`, `price`) VALUES ( 'White Toilet Brush', 9, 'WH', 'GeorgeHomeWhiteToiletBrush.jpeg', 2.00);
+INSERT INTO `products` (`name`, `cate`, `code`, `image`, `price`) VALUES ( 'Grand Alarm Clock', 9, 'GR', 'JonesGrandAlarm.jpeg', 6.00);
+
