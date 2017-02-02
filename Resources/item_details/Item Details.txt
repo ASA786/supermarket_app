@@ -61,6 +61,10 @@ INSERT INTO `products` (`name`, `cate`, `code`, `image`, `price`) VALUES ( 'Swee
 
 3 = Meat and Poultry
 
+--------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------3 = Meat and Poultry-------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------
+
 INSERT INTO `products` (`name`, `cate`, `code`, `image`, `price`) VALUES ( 'Goat Meat', 3, 'GM3', 'Goat-Meat.jpeg', 4.50);
 INSERT INTO `products` (`name`, `cate`, `code`, `image`, `price`) VALUES ( 'Beef Liver', 3, 'BL£', 'Beef-Liver.jpeg', 3.50);
 INSERT INTO `products` (`name`, `cate`, `code`, `image`, `price`) VALUES ( 'Lamb', 3, 'LB3', 'Lamb.jpeg', 4.00);
@@ -75,6 +79,10 @@ INSERT INTO `products` (`name`, `cate`, `code`, `image`, `price`) VALUES ( 'Turk
 
 
 4 = Fish and Seafood
+
+--------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------4 = Fish and Seafood-------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------
  
 INSERT INTO `products` (`name`, `cate`, `code`, `image`, `price`) VALUES ( 'Rohu', 4, 'RO4', 'rohu.jpeg', 5.00);
 INSERT INTO `products` (`name`, `cate`, `code`, `image`, `price`) VALUES ( 'Tilapia', 4, 'TI4', 'tilapia.jpeg', 4.50);
@@ -91,6 +99,10 @@ INSERT INTO `products` (`name`, `cate`, `code`, `image`, `price`) VALUES ( 'Squi
 
 5 = Bakery
 
+--------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------5 = Bakery-------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------
+
 INSERT INTO `products` (`name`, `cate`, `code`, `image`, `price`) VALUES ( 'Almond Croissant', 5, 'AC5', 'almond-Croissant.jpeg', 1.30);
 INSERT INTO `products` (`name`, `cate`, `code`, `image`, `price`) VALUES ( 'Scone', 5, 'SC5', 'scone.jpeg', 1.00);
 INSERT INTO `products` (`name`, `cate`, `code`, `image`, `price`) VALUES ( 'Doughnuts', 5, 'DO5', 'doughnuts.jpeg', 1.20);
@@ -106,6 +118,7 @@ INSERT INTO `products` (`name`, `cate`, `code`, `image`, `price`) VALUES ( 'Cust
 ----------------------------------------------------------------------------------------------------------------------------
 --------------------------------------------------- 6 = Drinks -------------------------------------------------------------
 ----------------------------------------------------------------------------------------------------------------------------
+
 INSERT INTO `products` (`name`, `cate`, `code`, `image`, `price`) VALUES ( 'Coke', 6, 'CK1', 'coke.jpeg', 1.00);
 INSERT INTO `products` (`name`, `cate`, `code`, `image`, `price`) VALUES ( 'Fanta', 6, 'FN1', 'fanta.jpeg', 1.20);
 INSERT INTO `products` (`name`, `cate`, `code`, `image`, `price`) VALUES ( 'Sprite', 6, 'SP1', 'sprite.jpeg', 1.27);
@@ -120,6 +133,7 @@ INSERT INTO `products` (`name`, `cate`, `code`, `image`, `price`) VALUES ( 'Free
 -----------------------------------------------------------------------------------------------------------------------------------
 ---------------------------------------------------7 = Electronics-----------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------------------------
+
 INSERT INTO `products` (`name`, `cate`, `code`, `image`, `price`) VALUES ( 'Slow Cooker', 7, 'SL', 'George.jpeg', 10.00);
 INSERT INTO `products` (`name`, `cate`, `code`, `image`, `price`) VALUES ( 'Logitech Deskset', 7, 'LD', 'Logitechk.jpeg', 20.00);
 INSERT INTO `products` (`name`, `cate`, `code`, `image`, `price`) VALUES ( 'Wireless Mouse', 7, 'WM', 'Logitech.jpeg', 12.50);
@@ -134,6 +148,7 @@ INSERT INTO `products` (`name`, `cate`, `code`, `image`, `price`) VALUES ( 'Sand
 ------------------------------------------------------------------------------------------------------------------------------------
 ---------------------------------------------------8 = Kids Toys--------------------------------------------------------------------
 ------------------------------------------------------------------------------------------------------------------------------------
+
 INSERT INTO `products` (`name`, `cate`, `code`, `image`, `price`) VALUES ( 'LEGO City Fire Ladder', 8, 'LC', 'LEGOCityFireLadder.jpeg', 17.97);
 INSERT INTO `products` (`name`, `cate`, `code`, `image`, `price`) VALUES ( 'Bathtime Fun', 8, 'BF', 'LittleTikesBathtime.jpeg', 10.00);
 INSERT INTO `products` (`name`, `cate`, `code`, `image`, `price`) VALUES ( 'Little Tikes Hammer', 8, 'LH', 'LittleTikesHammer.jpeg', 6.00);
