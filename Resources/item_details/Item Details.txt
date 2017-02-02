@@ -61,6 +61,17 @@ INSERT INTO `products` (`name`, `cate`, `code`, `image`, `price`) VALUES ( 'Swee
 
 3 = Meat and Poultry
 
+INSERT INTO `products` (`name`, `cate`, `code`, `image`, `price`) VALUES ( 'Goat Meat', 3, 'GM3', 'Goat-Meat.jpeg', 4.50);
+INSERT INTO `products` (`name`, `cate`, `code`, `image`, `price`) VALUES ( 'Beef Liver', 3, 'BL£', 'Beef-Liver.jpeg', 3.50);
+INSERT INTO `products` (`name`, `cate`, `code`, `image`, `price`) VALUES ( 'Lamb', 3, 'LB3', 'Lamb.jpeg', 4.00);
+INSERT INTO `products` (`name`, `cate`, `code`, `image`, `price`) VALUES ( 'Mutton', 3, 'MU3', 'Mutton.jpeg', 5.50);
+INSERT INTO `products` (`name`, `cate`, `code`, `image`, `price`) VALUES ( 'Pork', 3, 'PO3', 'Pork.jpeg', 3.20);
+INSERT INTO `products` (`name`, `cate`, `code`, `image`, `price`) VALUES ( 'Chicken', 3, 'CH3', 'Chicken.jpeg', 0.75);
+INSERT INTO `products` (`name`, `cate`, `code`, `image`, `price`) VALUES ( 'Duck Liver', 3, 'DL3', 'Duck-Liver.jpeg', 3.00);
+INSERT INTO `products` (`name`, `cate`, `code`, `image`, `price`) VALUES ( 'Ostrich', 3, 'OS3', 'Ostrich.jpeg', 6.00);
+INSERT INTO `products` (`name`, `cate`, `code`, `image`, `price`) VALUES ( 'Quail', 3, 'QU3', 'Quail.jpeg', 5.60);
+INSERT INTO `products` (`name`, `cate`, `code`, `image`, `price`) VALUES ( 'Turkey', 3, 'TU3', 'Turkey.jpeg', 6.30);
+
 
 
 4 = Fish and Seafood
