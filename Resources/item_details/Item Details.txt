@@ -42,6 +42,21 @@ INSERT INTO `products` (`name`, `cate`, `code`, `image`, `price`) VALUES ( 'Wate
 
 2 = Vegetables
 
+--------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------2 = Vegetables---------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------
+
+INSERT INTO `products` (`name`, `cate`, `code`, `image`, `price`) VALUES ( 'Asparagus', 2, 'AS', 'Asparagus.jpeg', 2.00);
+INSERT INTO `products` (`name`, `cate`, `code`, `image`, `price`) VALUES ( 'Broccoli', 2, 'BR', 'Broccoli.jpeg', 0.79);
+INSERT INTO `products` (`name`, `cate`, `code`, `image`, `price`) VALUES ( 'Carrot', 2, 'CA', 'Carrot.jpeg', 0.60);
+INSERT INTO `products` (`name`, `cate`, `code`, `image`, `price`) VALUES ( 'Garlic', 2, 'GA', 'Garlic.jpeg', 0.20);
+INSERT INTO `products` (`name`, `cate`, `code`, `image`, `price`) VALUES ( 'Mushrooms', 2, 'MU', 'Mushrooms.jpeg', 1.15);
+INSERT INTO `products` (`name`, `cate`, `code`, `image`, `price`) VALUES ( 'Onions', 2, 'ON', 'Onions.jpeg', 0.75);
+INSERT INTO `products` (`name`, `cate`, `code`, `image`, `price`) VALUES ( 'Peas', 2, 'PE', 'Peas.jpeg', 1.00);
+INSERT INTO `products` (`name`, `cate`, `code`, `image`, `price`) VALUES ( 'Potatoes', 2, 'PO', 'Potatoes.jpeg', 1.00);
+INSERT INTO `products` (`name`, `cate`, `code`, `image`, `price`) VALUES ( 'Redpepper', 2, 'RE', 'Redpepper.jpeg', 0.60);
+INSERT INTO `products` (`name`, `cate`, `code`, `image`, `price`) VALUES ( 'Sweetcorn', 2, 'SW', 'Sweetcorn.jpeg', 2.00);
+
 
 
 3 = Meat and Poultry
