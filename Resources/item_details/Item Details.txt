@@ -90,7 +90,7 @@ INSERT INTO `products` (`name`, `cate`, `code`, `image`, `price`) VALUES ( 'Rohu
 INSERT INTO `products` (`name`, `cate`, `code`, `image`, `price`) VALUES ( 'Tilapia', 4, 'TI4', 'tilapia.jpeg', 4.50);
 INSERT INTO `products` (`name`, `cate`, `code`, `image`, `price`) VALUES ( 'Salmon', 4, 'SA4', 'salmon.jpeg', 11.00);
 INSERT INTO `products` (`name`, `cate`, `code`, `image`, `price`) VALUES ( 'Cod', 4, 'CO4', 'cod.jpeg', 6.00);
-INSERT INTO `products` (`name`, `cate`, `code`, `image`, `price`) VALUES ( 'Catfish', 4, 'CA4', 'catfish.jpeg', 7.50);
+INSERT INTO `products` (`name`, `cate`, `code`, `image`, `price`) VALUES ( 'Catfish fillets', 4, 'CA4', 'catfish-fillets.jpeg', 7.50);
 INSERT INTO `products` (`name`, `cate`, `code`, `image`, `price`) VALUES ( 'Snapper', 4, 'SN4', 'snapper.jpeg', 6.80);
 INSERT INTO `products` (`name`, `cate`, `code`, `image`, `price`) VALUES ( 'Crab', 4, 'CR4', 'crab.jpeg', 7.00);
 INSERT INTO `products` (`name`, `cate`, `code`, `image`, `price`) VALUES ( 'Jellied eels', JE4, 'JE4', 'jellied-eels.jpeg', 6.20);
