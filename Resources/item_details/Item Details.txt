@@ -73,7 +73,7 @@ INSERT INTO `products` (`name`, `cate`, `code`, `image`, `price`) VALUES ( 'Pork
 INSERT INTO `products` (`name`, `cate`, `code`, `image`, `price`) VALUES ( 'Chicken Breast', 3, 'CB3', 'Chicken-Breast.jpeg', 1.75);
 INSERT INTO `products` (`name`, `cate`, `code`, `image`, `price`) VALUES ( 'Duck Leg', 3, 'DL3', 'Duck-Leg.jpeg', 3.00);
 INSERT INTO `products` (`name`, `cate`, `code`, `image`, `price`) VALUES ( 'Sausages', 3, 'SA3', 'Sausages.jpeg', 2.00);
-INSERT INTO `products` (`name`, `cate`, `code`, `image`, `price`) VALUES ( 'Diced Lamb', 3, 'DL3', 'Diced-Lamb.jpeg', 4.60);
+INSERT INTO `products` (`name`, `cate`, `code`, `image`, `price`) VALUES ( 'Diced Lamb', 3, 'DL33', 'Diced-Lamb.jpeg', 4.60);
 INSERT INTO `products` (`name`, `cate`, `code`, `image`, `price`) VALUES ( 'Pork Chops', 3, 'PC3', 'Pork-Chops.jpeg', 3.30);
 INSERT INTO `products` (`name`, `cate`, `code`, `image`, `price`) VALUES ( 'Salmon Fillets', 3, 'SF3', 'Salmon-Fillets.jpeg', 6.60);
 INSERT INTO `products` (`name`, `cate`, `code`, `image`, `price`) VALUES ( 'Chicken Wings', 3, 'CW3', 'Chicken-Wings.jpeg', 3.30);
@@ -93,7 +93,7 @@ INSERT INTO `products` (`name`, `cate`, `code`, `image`, `price`) VALUES ( 'Cod'
 INSERT INTO `products` (`name`, `cate`, `code`, `image`, `price`) VALUES ( 'Catfish fillets', 4, 'CA4', 'catfish-fillets.jpeg', 7.50);
 INSERT INTO `products` (`name`, `cate`, `code`, `image`, `price`) VALUES ( 'Snapper', 4, 'SN4', 'snapper.jpeg', 6.80);
 INSERT INTO `products` (`name`, `cate`, `code`, `image`, `price`) VALUES ( 'Crab', 4, 'CR4', 'crab.jpeg', 7.00);
-INSERT INTO `products` (`name`, `cate`, `code`, `image`, `price`) VALUES ( 'Jellied eels', JE4, 'JE4', 'jellied-eels.jpeg', 6.20);
+INSERT INTO `products` (`name`, `cate`, `code`, `image`, `price`) VALUES ( 'Jellied eels', 4, 'JE4', 'jellied-eels.jpeg', 6.20);
 INSERT INTO `products` (`name`, `cate`, `code`, `image`, `price`) VALUES ( 'Lobster', 4, 'LO4', 'lobster.jpeg', 9.00);
 INSERT INTO `products` (`name`, `cate`, `code`, `image`, `price`) VALUES ( 'Octopus', 4, 'OC4', 'octopus.jpeg', 8.50);
 INSERT INTO `products` (`name`, `cate`, `code`, `image`, `price`) VALUES ( 'Squid', 4, 'SQ4', 'squid.jpeg', 10.00);
