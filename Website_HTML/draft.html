@@ -1,0 +1,217 @@
+<html><head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style/draft_style.css">
+  <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
+<script src="js/js-image-slider.js" type="text/javascript"></script>
+<title>Sada Supermarket</title>
+</head>
+
+<body>
+
+
+
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+    <li><a href="index.php">Home</a></li>
+	
+	<li><a href="?page=htc">How to Connect</a></li>
+<li><a href="?page=contact">Contact</a></li>
+</div>
+
+<div class="wrapper">
+<div class="navbar">
+
+
+<ul>
+  <li><a class="active" href="index.php">Home</a></li>
+	 
+  <li class="dropdown">
+    <a href="javascript:void(0)" class="dropbtn">Categories</a>
+    <div class="dropdown-content">
+      <a href="?cat=1">Fruits</a>
+      <a href="?cat=2">Veg</a>
+      <a href="?cat=3">Meat and Poultry</a>
+	  <a href="?cat=4">Fish and Seafood</a>
+      <a href="?cat=5">Bakery</a>
+	  <a href="?cat=6">Drinks</a>
+	  <a href="?cat=7">Electronics</a>
+	  <a href="?cat=8">Kids Toys</a>	  
+      <a href="?cat=9">Bed, Bath and Home</a>
+
+
+    </div>
+</li><li><a href="?page=contact">Contact</a></li>  <li><a href="?page=htc">Customer Support</a></li>
+   <li style="float:right"><a href="#about">Basket</a></li>
+</ul>
+
+ </div>
+
+<div class="header"> 
+
+ 
+</div>
+
+<div class="row" style="margin-top:1px;">
+
+<div class="leftcol">
+
+
+	
+
+
+	
+	<div class="leftPanelTitle">Shopping Cart</div>
+	<div class="leftPanelContent"> 
+	<div id="shopping-cart"><form method="post" action="">
+
+<br><table cellpadding="10" cellspacing="1">
+<tbody>
+<tr>
+
+<th><strong>Name</strong></th>
+
+<th><strong>QTY</strong></th>
+
+<th><strong></strong></th>
+</tr>	
+
+
+<tr>
+
+</tr>
+
+
+</tbody>
+
+</table>
+<br>
+
+
+
+<button name="clear" type="submit" value="" style="width: 145px;">Clear Cart</button>
+<button name="checkout" type="submit" value="" style="width: 145px; float:right;">Checkout</button>
+</form>
+<br>
+	</div> 	</div> 	
+
+
+	
+		
+	<div class="leftPanelTitle">Account
+   </div>
+	<div class="leftPanelContent">
+	
+
+
+	
+  <div class="text">   <h1>  Profile Information </h1> <ul style="list-style-type:none">
+  <li> Email: sabbamf@gmail.com</li>
+<br>  <li> Balance:  £145.87</li>
+<br>  <li> Points:  58.333</li>
+</ul> <ul style="list-style-type:none;">
+  <li><a href="?ucp=1"> Edit Account</a></li>
+</ul>		<form action="/core/logout.php" method="post">
+	<button type="submit" name="logout">Logout</button>
+	</form>
+</div>
+	</div> 	</div> 	
+
+
+
+<div class="rightcol">
+
+		<div class="rightPanelTitle">Latest News</div>
+	<div class="rightPanelContent"><div style="text-align:center">
+<a class="prev" onclick="plusSlides(-1)">❮</a>
+  <span class="dot active" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+  <span class="dot" onclick="currentSlide(4)"></span> 
+  <span class="dot" onclick="currentSlide(5)"></span> 
+  <a class="next" onclick="plusSlides(1)">❯</a>
+<br><br></div><div class="mySlides fade" style="display: block;">
+<div class="topic_banner" style="background-image:url('/images/topic_banner.jpg')"> </div>
+
+
+  <div class="text"> <h1> 20% Offer on Fruits </h1> Ut vidit aperiam mea, vim ut dolor graece definitiones. Et alii dolorem usu. Ad est omnesque iracundia, sea reque iuvaret ut. Iriure reprimique eum in, ad has nulla possim, sed in alterum veritus. Te per nihil nusquam luptatum, ad nam appareat argumentum. <h1 style="text-align:right; font-size:12px;">2017-01-07 22:19:14 </h1> </div>
+</div><div class="mySlides fade" style="display: none;">
+<div class="topic_banner" style="background-image:url('/images/topic_banner.jpg')"> </div>
+
+
+  <div class="text"> <h1> 20% Offer on Fruits </h1> Ut vidit aperiam mea, vim ut dolor graece definitiones. Et alii dolorem usu. Ad est omnesque iracundia, sea reque iuvaret ut. Iriure reprimique eum in, ad has nulla possim, sed in alterum veritus. Te per nihil nusquam luptatum, ad nam appareat argumentum. <h1 style="text-align:right; font-size:12px;">2017-01-08 19:31:18 </h1> </div>
+</div><div class="mySlides fade" style="display: none;">
+<div class="topic_banner" style="background-image:url('/images/topic_banner.jpg')"> </div>
+
+
+  <div class="text"> <h1> Lorem Ipsum </h1> Ut vidit aperiam mea, vim ut dolor graece definitiones. Et alii dolorem usu. Ad est omnesque iracundia, sea reque iuvaret ut. Iriure reprimique eum in, ad has nulla possim, sed in alterum veritus. Te per nihil nusquam luptatum, ad nam appareat argumentum. <h1 style="text-align:right; font-size:12px;">2017-01-19 00:02:44 </h1> </div>
+</div><div class="mySlides fade" style="display: none;">
+<div class="topic_banner" style="background-image:url('/images/topic_banner.jpg')"> </div>
+
+
+  <div class="text"> <h1> Lorem Ipsum </h1> Ut vidit aperiam mea, vim ut dolor graece definitiones. Et alii dolorem usu. Ad est omnesque iracundia, sea reque iuvaret ut. Iriure reprimique eum in, ad has nulla possim, sed in alterum veritus. Te per nihil nusquam luptatum, ad nam appareat argumentum. <h1 style="text-align:right; font-size:12px;">2017-01-19 00:02:44 </h1> </div>
+</div><div class="mySlides fade" style="display: none;">
+<div class="topic_banner" style="background-image:url('/images/topic_banner.jpg')"> </div>
+
+
+  <div class="text"> <h1> Lorem Ipsum </h1> Ut vidit aperiam mea, vim ut dolor graece definitiones. Et alii dolorem usu. Ad est omnesque iracundia, sea reque iuvaret ut. Iriure reprimique eum in, ad has nulla possim, sed in alterum veritus. Te per nihil nusquam luptatum, ad nam appareat argumentum. <h1 style="text-align:right; font-size:12px;">2017-01-19 00:02:44 </h1> </div>
+</div></div></div></div>	
+
+
+
+<br>
+
+
+<br>
+
+
+
+<div class="footer">
+
+	
+	<div class="text" style="margin-left:10px;">Powered by <br>SadaCMS<br>loaded in 0.0058 seconds.<p> © SADA Supermarkets</p>
+</div>
+
+</div>
+
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+    document.getElementById("main").style.marginLeft = "250px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("main").style.marginLeft= "0";
+}
+</script>
+
+</div></body></html>
