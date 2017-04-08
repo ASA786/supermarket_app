@@ -84,7 +84,18 @@ function accountInfo($username, $conn)
 
 function pages($conn)
 {
-
+	
+ // username and password sent from form 
+    $info   = array();
+    $sql    = "SELECT * FROM pages";
+    $result = mysqli_query($conn, $sql);
+    if (mysqli_num_rows($result) > 0) {
+        while ($results = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
+            $info["$results[id]"] = $results;
+        }
+        mysqli_free_result($result);
+        return $info;
+    }
 
 }
 function page_info($conn, $pagename)
