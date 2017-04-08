@@ -100,8 +100,29 @@ function redeemPoints($conn, $user, $points) {
 
 function promoCode($conn, $user, $code) {
 	
-	
+$sql = "SELECT * FROM promotions WHERE code = '$code'";	
+$result = mysqli_query($conn, $sql);
+if (mysqli_num_rows($result) > 0) {
+    // output data of each row
+    while($row = mysqli_fetch_assoc($result)) {
+        $newCat = $row["cate"];
+		$reduction = $row["discount"];
+
+		
+    }
+if ($newCat == 0) {
+	$sql1 = "UPDATE cart SET s_price = s_price - s_price *'$reduction', discounted = 1  WHERE user_id = '$user' AND discounted = 0";
+}else {
+$sql1 = "UPDATE cart SET s_price = s_price - s_price *'$reduction', discounted = 1  WHERE user_id = '$user' AND cate = '$newCat' AND discounted = 0";
 }
+if (mysqli_query($conn, $sql1)){
+$result = "Points Redeemed";
+}else {
+	$result = "Not Added";
+}
+	return $result;	
+	
+}}
 
 function restock($conn, $code, $quantity) {
 
