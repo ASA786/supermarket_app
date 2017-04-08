@@ -64,7 +64,17 @@ function login($username, $password, $conn)
 
 function news($conn)
 {
-
+ // username and password sent from form 
+    $messages = array();
+    $sql      = "SELECT * FROM news ORDER BY date";
+    $result   = mysqli_query($conn, $sql);
+    if (mysqli_num_rows($result) > 0) {
+        while ($results = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
+            $messages["$results[id]"] = $results;
+        }
+        mysqli_free_result($result);
+        return $messages;
+    }
 }
 function accountInfo($username, $conn)
 {
