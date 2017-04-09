@@ -10,7 +10,7 @@ $password = "";
 
 $database_cms = "posioncms";
 
-$server_name = "Server Name";
+$server_name = "Sada Supermarket";
 
 
 ?>
