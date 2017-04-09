@@ -86,6 +86,16 @@ if (isset($_GET['page'])) {
         }echo "</div>";    echo "</div>";    echo "</div>";
     } elseif ($page_name == "contact") {
 ?>  
+	<!-- Abdol below here here -->
+	
+	
+	<!--Abdols part finished -->
+	
+	
+	<!-- Akber below here here -->
+	
+	
+	<!--Akber part finished -->
 	
 		<div class="rightPanelTitle">Latest News</div><!-- Right Panel Title-->
 	<div class="rightPanelContent"><div style="text-align:center">
