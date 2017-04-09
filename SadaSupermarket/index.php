@@ -36,7 +36,57 @@ include "include/leftPanel.php";
 
 <!-- Where the Right col starts -->
 <div class="rightcol">
+	<?php
 
+if (isset($_GET['page'])) {
+    $page_name = $_GET['page'];
+    if ($page_name == "register") {
+		
+?> <div class="rightPanelTitle">Register</div>              
+<div class="rightPanelContent">            
+<div class = "text" style = "text-align: center;">
+<h1> Registration Form </h1>
+			<form  action="" method="POST">
+
+					<input type="text"   name="fname" placeholder="First Name"required><br>
+					
+					<input type="text"   name="sname" placeholder="Last Name"required><br>
+					
+					<input type="email"  name="email"placeholder="Enter your email"required><br>
+					<br>
+					<input type="text"   name="address" placeholder="Address"required><br>	
+					
+					<input type="text"   name="postcode" placeholder="Enter Postcode"required><br>	
+					
+					<input type="number"   name="mnumber" placeholder="Enter Mobile number"required><br>					
+<br>
+					<input type="password" name="pass"placeholder="Enter password"required><br>
+
+					<input type="password" name="repass"placeholder="Re-password"required><br>
+
+<br>
+					    <button type="submit" name="register">Register</button>
+						
+						</form> <br>
+						
+	<?php   
+        if (isset($_POST['register'])) {
+            
+            if ($_POST['pass'] == $_POST['repass']) {
+                $result = register($_POST['fname'], $_POST['sname'], $_POST['email'], $_POST['address'], $_POST['postcode'], $_POST['mnumber'], $_POST['pass'], $conn);
+				echo "<h1> ";
+			   echo $result;
+			   echo "</h1> ";
+
+            } else {
+								echo "<h1> ";
+                echo "Passwords do not match";
+							   echo "</h1> ";
+            }
+        }echo "</div>";    echo "</div>";    echo "</div>";
+    } elseif ($page_name == "contact") {
+?>  
+	
 		<div class="rightPanelTitle">Latest News</div><!-- Right Panel Title-->
 	<div class="rightPanelContent"><div style="text-align:center">
 	<!-- Where the Slider starts, -->
