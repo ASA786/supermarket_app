@@ -45,6 +45,16 @@ function deleteProductsFromBasket($conn, $user, $id)
 function deleteProducts($conn, $user)
 {
 
+	$sql1    = "Delete FROM cart WHERE user_id = '$user'";	
+		
+        if (mysqli_query($conn, $sql1)) {
+            $result = "Deleted";
+  return $result;
+        } else {
+            $result = "Error: " . $sql1 . "<br>" . mysqli_error($conn);
+
+        }
+    return $result;
 
 
 
