@@ -339,6 +339,27 @@ Latest updates – we are recalling the following product 100% Beef Patties item
                 echo $checkout;
                 echo "<meta http-equiv='refresh' content='0'>";
             }
+		 echo "    </div> ";
+            echo "    </div> ";
+        } else {
+            echo "Need to be logged in";
+            
+        }
+        
+        
+    } else {
+        
+?> 
+        
+        <div class="rightPanelTitle">Groceries</div>    
+        <div class="rightPanelContent">
+        
+        <?php
+        echo "Need to be logged in";
+        echo "</div>  ";
+    }
+    
+?>
 	
 	<!--Abdols part finished -->
 	
