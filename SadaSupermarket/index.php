@@ -20,7 +20,15 @@ include "include/header.php";
 <div class="header"></div>
 
 
-<div class="row" style="margin-top:1px;">
+ <div class="menu"></div>
+</div>
+
+<div class="row" style="margin-top:1px;" >
+
+<?php
+require_once SITE_ROOT . "/include/leftPanel.php";
+?>
+
 
 <?php
 include "include/leftPanel.php";
