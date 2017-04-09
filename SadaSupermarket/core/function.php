@@ -158,7 +158,17 @@ function news($conn)
 }
 function accountInfo($username, $conn)
 {
-
+    // username sent from form 
+    $info   = array();
+    $sql    = "SELECT * FROM account WHERE email = '$username'";
+    $result = mysqli_query($conn, $sql);
+    if (mysqli_num_rows($result) > 0) {
+        while ($results = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
+            $info["$results[id]"] = $results;
+        }
+        mysqli_free_result($result);
+        return $info;
+    }
 
 }
 
@@ -185,7 +195,18 @@ function page_info($conn, $pagename)
 }
 function ucp($conn, $type)
 {
-
+    // username and password sent from form 
+    $info   = array();
+    $sql    = "SELECT * FROM ucp_features WHERE enable = '$type'";
+    $result = mysqli_query($conn, $sql);
+    if (mysqli_num_rows($result) > 0) {
+        while ($results = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
+            $info["$results[id]"] = $results;
+        }
+        mysqli_free_result($result);
+        return $info;
+    }
+    return $info;
 
 }
 
