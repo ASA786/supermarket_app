@@ -32,19 +32,33 @@ session_start();
 
 <body>
 
+<div class="wrapper">
+<div class="navbar">
 
 
-
-<div id="mySidenav" class="sidenav">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-    <li><a href="index.php">Home</a></li>
-	
+<ul>
+  <li><a class="active" href="index.php">Home</a></li>
 	<?php
 if (!isset($_SESSION['login_user'])) {
     echo "<li><a href=\"?page=register\">Register</a></li>";
 }
 ?>
-<li><a href="?page=htc">How to Connect</a></li>
+ 
+  <li class="dropdown">
+    <a href="javascript:void(0)" class="dropbtn">Categories</a>
+    <div class="dropdown-content">
+      <a href="?cat=1">Fruits</a>
+      <a href="?cat=2">Veg</a>
+      <a href="?cat=3">Meat and Poultry</a>
+	  <a href="?cat=4">Fish and Seafood</a>
+      <a href="?cat=5">Bakery</a>
+	  <a href="?cat=6">Drinks</a>
+	  <a href="?cat=7">Electronics</a>
+	  <a href="?cat=8">Kids Toys</a>	  
+      <a href="?cat=9">Bed, Bath and Home</a>
+
+
+    </div>
 <?php
 $pages = pages($conn);
 if (count($pages)) {
@@ -53,5 +67,8 @@ if (count($pages)) {
     }
 }
 ?>
+  <li><a href="?page=contact">Contact Us</a></li>
 
-</div>
+</ul>
+
+ </div>
