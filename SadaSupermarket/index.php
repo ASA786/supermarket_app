@@ -151,6 +151,66 @@ Latest updates – we are recalling the following product 100% Beef Patties item
     
     if (isset($_SESSION['login_user'])) {
 ?>
+	<div class="rightPanelTitle">Groceries</div>              
+         
+<div class = "text" style = "text-align: center; margin-left:20px;">
+<?php
+        
+        
+?>
+
+
+<div id="product-grid">
+
+    <?php
+        $products = getProducts($conn, $_GET['cat']);
+        if (count($products)) {
+            foreach ($products AS $id => $products_info) {
+                
+                
+?>
+
+        <div class="product-item">
+            <form method="post" action="">
+
+            <div><strong><?php
+                echo $products_info["name"];
+?></strong></div>
+                        <div class="product-image"><img src="images/products/<?php
+                echo $products_info["image"];
+?>"></div>
+            <div class="product-price"><?php
+                echo "£" . $products_info["price"];
+?></div>
+            <div><input type="text" name="quantity" value="1" size="2" style="width:35px; margin-right:5px;" /><button name="add" type="submit" value="<?php
+                echo $products_info["code"];
+?>">Add</button></div>
+            </form>
+        </div>
+    <?php
+            }
+        }
+        if (isset($_POST['add'])) {
+            $productByCode = insertProductsToBasket($conn, $_SESSION['login_user'], $_POST['add'], $_POST['quantity']);
+            echo $productByCode;
+            echo "<meta http-equiv='refresh' content='0'>";
+            
+            
+        }
+    } else {
+        
+?> 
+        
+        <div class="rightPanelTitle">Groceries</div>    
+        <div class="rightPanelContent">
+        
+        <?php
+        echo "Need to be logged in";
+        echo "</div>  ";
+    }
+    
+?>
+</div>
 	
 	
 	<!-- Abdol below here here -->
