@@ -86,6 +86,73 @@ if (isset($_GET['page'])) {
         }echo "</div>";    echo "</div>";    echo "</div>";
     } elseif ($page_name == "contact") {
 ?>  
+	 <div class="rightPanelTitle">Contact Us</div>              
+<div class="rightPanelContent">            
+<div class = "text" >
+
+<h1>Store Locator: Find a store near you</h1>
+    There are many SADA superstores located here is a list of our stores
+    <ol type="">
+    <b>
+<li>Hownslow – 1223 CHARLI LANE, TW34JR, 0845 123 4365</li>
+<li>Ealing          - 691 ST MARY’S ROAD, W5 6TR, 0845 678 3432</li>
+<li>Wembley    - 987 DELL WAY, NH671WQ  0846 789 2343         </li>   
+<li>Hayes          - 43 NORTH HYDE ROAD UB38NR 0845 223 9099</li>
+<li>Uxbridge    - 1 LONGLANE DRIVE, UB79PQ, 0854 337 8993     </li> 
+<li>Southall     - 27 LANEDRIVESTREETROAD, UB12PT, 0845 001 007 </li>
+<li>Northalt    - UNIT 1 DEADLY MEDOWS, NT347ER 0857 090 1122</li>
+<li>Acton        -  AMIGO INDUSTRIAL AREA, AM73WR 0867 344 2232</li>
+<li>ShepardBush – BUSHY LANE, BU77SH, 0845 777 3242</li>
+<li>Reading – FATA LANE, RD11NR, 0877 909 2345</li>
+<li>Slough – DE MANGD VILLAS, SL11UT 0867 234 7786</li>
+<li>Maidenhead – COOPERS LANE, OM11GY, 0856 887 9922</li>
+</b>
+</ol>
+
+<h1>Contact us: How do you contact us?</h1>
+Email – info@sadasuper.com<br>
+Head Office Number – 0845 786 8672    <br><br>
+
+<h1>Refunds: How do I get a refund?</h1>
+We are very sorry to hear that you have to return something but we here at SADA superstore follow a very strict no refunds policy, however not to worry we will simply give you store credit for the item you return.                             Your Statuary rights as a customer are not affected.
+
+<h1>Complaints: Got any complaints?</h1>
+        Who do you contact to file a complaint, well we break it down in three categories
+<ol type="A">
+<li>Product – if the complaint is about a product than we regret to inform you that we are mearly a mediator between the brand and the customer so any product complaints should me made directly to the product company. If you require more information just pop down to any one of our branches and a customer service advisor will be able to provide you with more information.</li>
+<li>Store – if you need to make a complaint about a store you have visited please email our complaints helpline team at nolyf_help@sadasuper.com please make sure you provide the store location and other details in the complaint.</li>
+<li>Service – if you have had poor services we are absolutely sorry that this has happened to you, please provide us with further information and what we could of done to rectify or better provide you of service at service@sadasuper.com.<br></li>
+</ol>
+
+
+<h1>Price match: Our price match policies </h1>
+Over here at SADA superstore we have our own price match policies due to the fact that we are not Tesco’s, Sainsbury’s or Asda’s we don’t match simple is it not? But we still have the best deals our customers tell us.
+<h1>Product Emergency Recalls: </h1>
+If we need to recall our products we will post about it here
+Latest updates – we are recalling the following product 100% Beef Patties item no 1016571 sold between June 2001 and July 2017 if you still have this product return it immediately. The reason being because that’s not beef mate it’s a bit of a donkey mixture    still good protein though.
+
+
+<br> <br>
+
+<?php
+        echo "</div>";
+        echo "</div>";
+    } else {
+        $pages = page_info($conn, $page_name);
+        if (count($pages)) {
+            foreach ($pages AS $id => $data) {
+                echo "    <div class=\"rightPanelTitle\">$data[page_name]</div>\n";
+                echo "    <div class=\"rightPanelContent\">";
+                echo "  <div class=\"text\"> <h1>  $data[title] </h1> $data[content] </div>\n";
+            }
+        }
+    }
+} elseif (isset($_GET['cat'])) {
+    
+    if (isset($_SESSION['login_user'])) {
+?>
+	
+	
 	<!-- Abdol below here here -->
 	
 	
