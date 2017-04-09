@@ -319,7 +319,26 @@ Latest updates – we are recalling the following product 100% Beef Patties item
 <br>	
 	
 	<!-- Abdol below here here -->
-	
+	<?php
+            
+            if (isset($_POST['remove'])) {
+                $deleteProductByCode = deleteProductsFromBasket($conn, $_SESSION['login_user'], $_POST['remove']);
+                echo $deleteProductByCode;
+                echo "<meta http-equiv='refresh' content='0'>";
+            }
+            
+            if (isset($_POST['promo'])) {
+                $promoCode = promoCode($conn, $_SESSION['login_user'], $_POST['promocode']);
+                echo $promoCode;
+                echo "<meta http-equiv='refresh' content='0'>";
+            }
+            
+            if (isset($_POST['checkout2'])) {
+                $balance  = $info_data['balance'] - $totalprice;
+                $checkout = checkOut($conn, $_SESSION['login_user'], $totalprice, $balance);
+                echo $checkout;
+                echo "<meta http-equiv='refresh' content='0'>";
+            }
 	
 	<!--Abdols part finished -->
 	
