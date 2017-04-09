@@ -412,6 +412,74 @@ Latest updates – we are recalling the following product 100% Beef Patties item
                 foreach ($productsInStock AS $id => $stock_info) {
                     
 ?>
+	               <tr>
+                
+                <td><strong><?php
+                    echo $stock_info['product_name'];
+?></strong></td>
+
+                <td><?php
+                    echo $stock_info['product_quantity'];
+?></td>
+                <form method="post">
+                <td align=right><input type="number" name="Stock"  style="width:50px; margin-right:5px;" /></td>
+                <td>    
+                <button name="restock" type="submit" value="<?php
+                    echo $stock_info['id'];
+?>" style = "width:70px;">Restock</button></td>
+                </tr>
+                </form>
+                
+<?php
+                    
+                }
+            }
+            
+            if (isset($_POST['restock'])) {
+                $stock   = $_POST['Stock'];
+                $restock = restock($conn, $_POST['restock'], $stock);
+                echo "<meta http-equiv='refresh' content='0'>";
+            }
+     
+?>
+<tr>
+</tr>
+</tbody>
+
+</table>
+<br>
+<br>
+<?php
+
+            echo "    </div> ";
+            echo "    </div> ";
+            
+            
+            
+            
+            
+            
+        } else {
+            
+?>        
+        <div class="rightPanelTitle">Groceries</div>    
+        <div class="rightPanelContent">
+        
+        <?php
+            echo "Need to be logged in";
+            echo "</div>  ";
+        }
+        
+?>
+      
+    <?php
+    }
+} elseif (isset($_GET['transc'])) {
+    
+    
+    if (isset($_SESSION['login_user'])) {
+         
+?>
 		
 	
 	<!--Akber part finished -->
