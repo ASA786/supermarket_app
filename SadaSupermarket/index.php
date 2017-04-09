@@ -364,8 +364,55 @@ Latest updates – we are recalling the following product 100% Beef Patties item
 	<!--Abdols part finished -->
 	
 	
-	<!-- Akber below here here -->
-	
+	<!-- Akber below here here. I love Kendric Lamar -->
+	    <--! Code for stock control starts here -->
+    <?php
+    
+} elseif (isset($_GET['ucp'])) {
+    
+    
+    if (isset($_SESSION['login_user'])) {
+        
+        
+        
+?>
+
+<div class="rightPanelTitle">Stock</div>              
+         
+
+
+<div class="rightPanelContent">
+<?php
+        
+        
+        
+?>
+
+    <?php
+        if (isset($_SESSION['login_user'])) {
+?>
+<div id="shopping-cart">
+
+<table cellpadding="10" cellspacing="1">
+<tbody>
+
+<tr>
+<br>
+<th><strong>Product Name</strong></th>
+
+<th><strong>Product Stock</strong></th>
+<th><strong></strong></th>
+<th><strong></strong></th>
+</tr>    
+<?php
+            
+            $productsInStock = getProductsFromStock($conn, $_GET['ucp']);
+            $totalprice      = 0;
+            if (count($productsInStock)) {
+                foreach ($productsInStock AS $id => $stock_info) {
+                    
+?>
+		
 	
 	<!--Akber part finished -->
 	
