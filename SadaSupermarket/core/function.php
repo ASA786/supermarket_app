@@ -58,6 +58,23 @@ function checkOut($conn, $user, $price, $balance)
 
 function login($username, $password, $conn)
 {
+    // username and password sent from form 
+    $myusername = mysqli_real_escape_string($conn, $username);
+    $mypassword = mysqli_real_escape_string($conn, $password);
+
+    $sql        = "SELECT id FROM account WHERE email = '$myusername' and password  = '$mypassword'";
+    $result     = mysqli_query($conn, $sql);
+    $row        = mysqli_fetch_array($result, MYSQLI_ASSOC);
+    $count      = mysqli_num_rows($result);
+    // If result matched $myusername and $mypassword, table row must be 1 row
+    if ($count == 1) {
+        $_SESSION['login_user'] = $myusername;
+        $message                = true;
+        return $message;
+    } else {
+        $message = false;
+        return $message;
+    }
 
 
 }
