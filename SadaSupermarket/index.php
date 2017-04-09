@@ -365,7 +365,7 @@ Latest updates – we are recalling the following product 100% Beef Patties item
 	
 	
 	<!-- Akber below here here. I love Kendric Lamar -->
-	    <--! Code for stock control starts here -->
+	
     <?php
     
 } elseif (isset($_GET['ucp'])) {
@@ -603,7 +603,7 @@ Latest updates – we are recalling the following product 100% Beef Patties item
     }
     
 ?>
-<--! abdo rest is yours -->	
+	
 		<?php
     
 } else {
