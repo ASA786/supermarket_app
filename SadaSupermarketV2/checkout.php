@@ -122,7 +122,8 @@ $shipping_cost = ($shipping_cost)?'Shipping Cost : '.$currency. sprintf("%01.2f"
 					</div>
 				</fieldset>
 
-			</form>
+			</form> 
+			
 			<?php if(@$_GET['next']=="true" && $_SESSION['payment-step']=="true"): ?>
 			<form action="success.php" method="post" name="checkout-form" id="checkout-form">
 				<fieldset id="payment">
@@ -133,6 +134,29 @@ $shipping_cost = ($shipping_cost)?'Shipping Cost : '.$currency. sprintf("%01.2f"
 							<li>
 								<a class="redeempoint" id="redeem-link" href="redeem.php" style="text-decoration: none;">Redeem with Points</a>
 							</li>
+			
+							<li>
+								<!-- <input type="radio" name="payment-method" id="paypal" value="paypal" checked> -->
+								<a href="paypal.php"><img src="images/paypal.png" height="60"></a>
+
+							</li>
+
+							<li>
+								<!-- <input type="radio" name="payment-method" id="card" value="credit-card" > -->
+<!-- 								<label for="card">Credit Card</label> -->
+
+							  <script
+							    src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+							    data-key="<?php echo $stripe_api_key; ?>"
+							    data-amount="<?php echo $total; ?>"
+							    data-currency="GBP"
+							    data-name="<?php echo $site_name; ?>"
+							    data-description="Charge GBP <?php echo $total; ?>"
+							    data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
+							    data-locale="auto">
+							  </script>
+							
+							</li> 
 						</ul> <!-- .cd-payment-gateways -->
 					</div>
 
