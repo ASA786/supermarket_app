@@ -26,7 +26,18 @@ function getProductsFromStock($conn, $cate)
 
 function receipt($conn, $user)
 {
+    $info   = array();
 
+		$sql = "SELECT * FROM purchase_order WHERE user_id = '$user' ORDER BY date DESC";
+	
+    $result = mysqli_query($conn, $sql);
+    if (mysqli_num_rows($result) > 0) {
+        while ($results = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
+            $info["$results[id]"] = $results;
+        }
+        mysqli_free_result($result);
+        return $info;
+    }
 
 }
 function insertProductsToBasket($conn, $user, $code, $quantity)
@@ -38,7 +49,16 @@ function insertProductsToBasket($conn, $user, $code, $quantity)
 
 function deleteProductsFromBasket($conn, $user, $id)
 {
+	$sql1    = "Delete FROM cart WHERE id='$id'";	
+		
+        if (mysqli_query($conn, $sql1)) {
+            $result = "Deleted";
+  return $result;
+        } else {
+            $result = "Error: " . $sql1 . "<br>" . mysqli_error($conn);
 
+        }
+    return $result;
 
 }
 
