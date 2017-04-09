@@ -211,7 +211,112 @@ Latest updates – we are recalling the following product 100% Beef Patties item
     
 ?>
 </div>
-	
+
+                <?php
+    
+    
+} elseif (isset($_GET['checkout'])) {
+    
+    
+    if (isset($_SESSION['login_user'])) {
+        
+?>
+
+<div class="rightPanelTitle">Groceries</div>              
+         
+
+
+<div class="rightPanelContent">
+<?php
+
+?>
+
+    <?php
+        if (isset($_SESSION['login_user'])) {
+?>
+<div id="shopping-cart"><form method="post" action="">
+
+<table cellpadding="10" cellspacing="1">
+<tbody>
+<td colspan="5" align=right><strong>Balance:</strong> £<?php
+            echo $info_data['balance'];
+?></td>
+<tr>
+<br>
+<th><strong>Name</strong></th>
+
+<th><strong>QTY</strong></th>
+<th><strong>Price</strong></th>
+<th><strong></strong></th>
+</tr>    
+<?php
+            
+            $productsInBasket = getProductsFromBasket($conn, $_SESSION['login_user']);
+            $totalprice       = 0;
+            if (count($productsInBasket)) {
+                foreach ($productsInBasket AS $id => $basket_info) {
+                    
+?>
+               <tr>
+                <td><strong><?php
+                    echo $basket_info['product_name'];
+?></strong></td>
+
+                <td><?php
+                    echo $basket_info['quantity'];
+?></td>
+                <td align=right><?php
+                    echo "£" . $basket_info['s_price'];
+?></td>
+                <td>    
+                <button name="remove" type="submit" value="<?php
+                    echo $basket_info['id'];
+?>" style = "width:70px;">Remove</button></td>
+                </tr>
+                
+<?php
+                    $totalprice += ($basket_info['quantity'] * $basket_info['s_price']);
+                }
+            }
+
+?>
+
+
+<tr>
+<td colspan="5" align=right><strong>Total:</strong> <?php
+            echo "£" . $totalprice;
+?></td>
+
+</tr>
+
+
+</tbody>
+
+</table>
+<br>
+
+  <input type="text" name="promocode" value="Enter Promo Code">
+<button name="promo" type="submit" value="" style="width: 145px; " >Promotion Code</button><br><br>
+
+
+<?php
+            
+            if ($totalprice > $info_data['balance']) {
+                echo "Not enough funds, Please top up your balance";
+                $balance_check = false;
+            } else {
+                $balance_check = true;
+            }
+            
+            if ($balance_check == true) {
+?>
+<button name="checkout2" type="submit" value="" style="width: 145px; " >Checkout</button>
+<?php
+            }
+?>
+
+</form>
+<br>	
 	
 	<!-- Abdol below here here -->
 	
