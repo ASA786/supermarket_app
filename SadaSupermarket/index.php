@@ -480,10 +480,130 @@ Latest updates – we are recalling the following product 100% Beef Patties item
     if (isset($_SESSION['login_user'])) {
          
 ?>
-		
-	
-	<!--Akber part finished -->
-	
+<div class="rightPanelTitle">Purchased Orders</div>              
+         
+<div class="rightPanelContent">
+<?php
+     
+?>
+    <?php
+        if (isset($_SESSION['login_user'])) {
+?>
+<div id="shopping-cart"><form method="post" action="">
+
+<table cellpadding="10" cellspacing="1">
+<tbody>
+
+<tr>
+<br>
+<th><strong>Purchase ID</strong></th>
+
+<th><strong>Purchase Price</strong></th>
+<th><strong>Date</strong></th>
+<th><strong></strong></th>
+</tr>    
+<?php
+            
+            $receipts = receipt($conn, $_SESSION['login_user']);
+            
+            if (count($receipts)) {
+                foreach ($receipts AS $id => $receipts_info) {
+                    
+?>
+               <tr>
+                <td><strong><?php
+                    echo $receipts_info['id'];
+?></strong></td>
+                
+
+                <td>£<?php
+                    echo $receipts_info['price'];
+?></td>
+
+                <td><?php
+                    echo $receipts_info['date'];
+?></td>
+
+                </tr>         
+<?php
+                    
+                }
+            }
+            
+            if (isset($_POST['moreInfod'])) {
+                $stock   = $_POST['Stock'];
+                $restock = restock($conn, $_POST['restock'], $stock);
+                echo "<meta http-equiv='refresh' content='0'>";
+            }
+        
+?>
+
+
+<tr>
+</tr>
+</tbody>
+</table>
+
+<br>
+</form>
+<br>
+<?php
+ 
+            echo "    </div> ";
+            echo "    </div> ";
+  
+        } else {            
+?>       
+        <div class="rightPanelTitle">Groceries</div>    
+        <div class="rightPanelContent">
+        
+        <?php
+            echo "Need to be logged in";
+            echo "</div>  ";
+        }      
+?>
+ 
+    <?php
+    }
+} elseif (isset($_GET['addBalance'])) {
+  
+    if (isset($_SESSION['login_user'])) {        
+?>
+
+<div class="rightPanelTitle">Add Balance</div>              
+<div class="rightPanelContent">
+    <?php
+        if (isset($_SESSION['login_user'])) {
+            echo "        <form action=\"\" class=\"container\" method = \"post\">\n";
+            echo "    <input type=\"text\" placeholder=\"Enter Amount\" name=\"addbalance\" required>\n";
+            
+            echo "    <button type=\"submit\" name=\"addB\">Add</button>\n";
+            if (isset($_POST['addB'])) {
+                $newBalance = addBalance($conn, $_SESSION['login_user'], $_POST['addbalance']);
+                
+                echo $newBalance;
+                echo "<meta http-equiv='refresh' content='0'>";
+            }
+            echo "    </div> ";
+        } else {
+            echo "Need to be logged in";
+            
+        }
+              
+    } else {
+        
+?> 
+        
+        <div class="rightPanelTitle">Groceries</div>    
+        <div class="rightPanelContent">
+        
+        <?php
+        echo "Need to be logged in";
+        echo "</div>  ";
+    }
+    
+?>
+<--! abdo rest is yours -->	
 		<div class="rightPanelTitle">Latest News</div><!-- Right Panel Title-->
 	<div class="rightPanelContent"><div style="text-align:center">
 	<!-- Where the Slider starts, -->
