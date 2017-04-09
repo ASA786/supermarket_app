@@ -2,7 +2,31 @@
 
 function register($fname, $sname, $email, $address, $postcode, $number, $password, $conn)
 {
+    $fnam     = mysqli_real_escape_string($conn, $fname);
+    $snam     = mysqli_real_escape_string($conn, $sname);
+	$emai     = mysqli_real_escape_string($conn, $email);
+    $addres     = mysqli_real_escape_string($conn, $address);
+	$postcod     = mysqli_real_escape_string($conn, $postcode);
+    $numbe     = mysqli_real_escape_string($conn, $number);
+	$pass     = mysqli_real_escape_string($conn, $password);
 
+  
+    $sql1     = "SELECT email FROM account WHERE email = '$email'";
+    $sql2     = "INSERT INTO `account` (`fname`,`sname`,`email`,`address`,`postcode`,`number`,`password`)
+VALUES ('$fnam','$snam','$emai','$addres','$postcod','$numbe','$pass')";
+    $check    = mysqli_query($conn, $sql1);
+    if (mysqli_num_rows($check) == 0) {
+        if (mysqli_query($conn, $sql2)) {
+            $result = "Registration Complete";
+            return $result;
+        } else {
+            $result = "Error: " . $sql2 . "<br>" . mysqli_error($conn);
+            return $result;
+        }
+    } else {
+        $result = "Username or Email is already in use";
+        return $result;
+    }
 
 }
 
@@ -14,7 +38,16 @@ function getProducts($conn, $cate)
 
 function getProductsFromBasket($conn, $user)
 {
-
+    $info   = array();
+    $sql    = "SELECT * FROM cart WHERE user_id ='$user'ORDER BY id ASC";
+    $result = mysqli_query($conn, $sql);
+    if (mysqli_num_rows($result) > 0) {
+        while ($results = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
+            $info["$results[id]"] = $results;
+        }
+        mysqli_free_result($result);
+        return $info;
+    }
 
 }
 
