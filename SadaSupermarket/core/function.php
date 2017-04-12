@@ -10,7 +10,7 @@
 ##                                                 ##
 #####################################################
 
-// Sabaa
+
 function register($fname, $sname, $email, $address, $postcode, $number, $password, $conn)
 {
     $fnam     = mysqli_real_escape_string($conn, $fname);
@@ -40,7 +40,7 @@ VALUES ('$fnam','$snam','$emai','$addres','$postcod','$numbe','$pass')";
     }
 
 }
-// Akber
+
 function getProducts($conn, $cate)
 {
     $info   = array();
@@ -55,7 +55,7 @@ function getProducts($conn, $cate)
     }
 
 }
-// sabaa
+
 function getProductsFromBasket($conn, $user)
 {
     $info   = array();
@@ -70,7 +70,7 @@ function getProductsFromBasket($conn, $user)
     }
 
 }
-// akber 
+ 
 function getProductsFromStock($conn, $cate)
 {
     $info   = array();
@@ -89,7 +89,7 @@ function getProductsFromStock($conn, $cate)
     }
 
 }
-// sabaa
+
 function receipt($conn, $user)
 {
     $info   = array();
@@ -106,7 +106,7 @@ function receipt($conn, $user)
     }
 
 }
-// Subodh
+
 function insertProductsToBasket($conn, $user, $code, $quantity)
 {
     $info   = array();
@@ -145,7 +145,7 @@ VALUES ('$user','$r_cate','$r_name','$r_code','$quantity','$r_price','$f_price')
 
 }
 
-// Sabaa
+
 function deleteProductsFromBasket($conn, $user, $id)
 {
 
@@ -163,7 +163,7 @@ function deleteProductsFromBasket($conn, $user, $id)
 
 }
 
-// Sabaa
+
 function deleteProducts($conn, $user)
 {
 
@@ -181,7 +181,7 @@ function deleteProducts($conn, $user)
 
 }
 
-// David and Sabaa
+
 function checkOut($conn, $user, $price, $balance)
 { 
 	
@@ -219,7 +219,7 @@ function checkOut($conn, $user, $price, $balance)
 
 	
 }
-// Sabaa
+
 function login($username, $password, $conn)
 {
     // username and password sent from form 
@@ -241,7 +241,7 @@ function login($username, $password, $conn)
     }
 
 }
-// Abdol
+
 
 function news($conn)
 {
@@ -258,7 +258,7 @@ function news($conn)
     }
 
 }
-// Sabaa
+
 function accountInfo($username, $conn)
 {
     // username and password sent from form 
@@ -274,7 +274,7 @@ function accountInfo($username, $conn)
     }
 
 }
-//abdo
+
 function pages($conn)
 {
     // username and password sent from form 
@@ -290,7 +290,7 @@ function pages($conn)
     }
 
 }
-//akber
+
 function page_info($conn, $pagename)
 {
     // username and password sent from form 
@@ -306,7 +306,7 @@ function page_info($conn, $pagename)
     }
 
 }
-// Sabaa and Akber
+
 function ucp($conn, $type)
 {
     // username and password sent from form 
@@ -324,7 +324,7 @@ function ucp($conn, $type)
 
 }
 
-// David
+
 function addBalance($conn, $user, $balance) {
 	
 $sql = "UPDATE account SET balance = balance + '$balance' WHERE email = '$user'";
@@ -336,7 +336,7 @@ $result = "Added";
 	return $result;
 }
 
-// Subodh
+
 function redeemPoints($conn, $user, $points) {
 	
 	
@@ -352,7 +352,7 @@ $result = "Points Redeemed";
 	return $result;
 }
 
-// Abdol
+
 function promoCode($conn, $user, $code) {
 	
 	
@@ -378,7 +378,7 @@ $result = "Points Redeemed";
 }
 	return $result;
 }}
-// Akber
+
 function restock($conn, $code, $quantity) {
 	
 	
