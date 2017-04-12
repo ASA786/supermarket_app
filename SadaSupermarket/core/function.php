@@ -1,5 +1,16 @@
 <?php
+#####################################################
+##                                                 ##
+##                                                 ##
+##                                                 ##
+##            Copyrights © PosionCMS     		   ##
+##                                                 ##
+##                                                 ##
+##                                                 ##
+##                                                 ##
+#####################################################
 
+// Sabaa
 function register($fname, $sname, $email, $address, $postcode, $number, $password, $conn)
 {
     $fnam     = mysqli_real_escape_string($conn, $fname);
@@ -29,13 +40,22 @@ VALUES ('$fnam','$snam','$emai','$addres','$postcod','$numbe','$pass')";
     }
 
 }
-
+// Akber
 function getProducts($conn, $cate)
 {
-
+    $info   = array();
+    $sql    = "SELECT * FROM products WHERE cate = '$cate' ORDER BY id ASC";
+    $result = mysqli_query($conn, $sql);
+    if (mysqli_num_rows($result) > 0) {
+        while ($results = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
+            $info["$results[id]"] = $results;
+        }
+        mysqli_free_result($result);
+        return $info;
+    }
 
 }
-
+// sabaa
 function getProductsFromBasket($conn, $user)
 {
     $info   = array();
@@ -50,13 +70,26 @@ function getProductsFromBasket($conn, $user)
     }
 
 }
-
+// akber 
 function getProductsFromStock($conn, $cate)
 {
-
+    $info   = array();
+	if ($cate == 1){
+    $sql    = "SELECT * FROM stock ORDER BY product_type ASC";
+	}elseif ($cate == 2){
+		$sql = "SELECT * FROM stock WHERE product_quantity < 750 ORDER BY product_quantity ASC";
+	}
+    $result = mysqli_query($conn, $sql);
+    if (mysqli_num_rows($result) > 0) {
+        while ($results = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
+            $info["$results[id]"] = $results;
+        }
+        mysqli_free_result($result);
+        return $info;
+    }
 
 }
-
+// sabaa
 function receipt($conn, $user)
 {
     $info   = array();
@@ -73,15 +106,49 @@ function receipt($conn, $user)
     }
 
 }
+// Subodh
 function insertProductsToBasket($conn, $user, $code, $quantity)
 {
+    $info   = array();
+    $sql    = "SELECT * FROM products WHERE code='$code'";
+	
 
+
+    $check    = mysqli_query($conn, $sql);
+	if (mysqli_num_rows($check) > 0) {
+    // output data of each row
+    while($row = mysqli_fetch_assoc($check)) {
+		
+		$r_name = $row['name'];
+		$r_code = $row['code'];
+		$r_cate = $row['cate'];
+		$r_price = $row['price'];
+		$f_price = $r_price * $quantity;
+	$sql1    = "SELECT * FROM cart WHERE product_code='$code' AND user_id = '$user'";	
+		
+	$check1    = mysqli_query($conn, $sql1);
+	if (mysqli_num_rows($check1) > 0) {
+	$sql2 = "UPDATE cart SET quantity = quantity + '$quantity' WHERE product_code = '$code' AND user_id='$user'" ;
+	}else {
+   $sql2     = "INSERT INTO cart (`user_id`,`cate`,`product_name`,`product_code`,`quantity`,`s_price`, `f_price`)
+VALUES ('$user','$r_cate','$r_name','$r_code','$quantity','$r_price','$f_price')";
+	}
+        if (mysqli_query($conn, $sql2)) {
+            $result = "Added To Basket";
+
+        } else {
+            $result = "Error: " . $sql2 . "<br>" . mysqli_error($conn);
+
+        }
+    }return $result;
+} 
 
 }
 
-
+// Sabaa
 function deleteProductsFromBasket($conn, $user, $id)
 {
+
 	$sql1    = "Delete FROM cart WHERE id='$id'";	
 		
         if (mysqli_query($conn, $sql1)) {
@@ -93,8 +160,10 @@ function deleteProductsFromBasket($conn, $user, $id)
         }
     return $result;
 
+
 }
 
+// Sabaa
 function deleteProducts($conn, $user)
 {
 
@@ -110,15 +179,47 @@ function deleteProducts($conn, $user)
     return $result;
 
 
-
 }
 
+// David and Sabaa
 function checkOut($conn, $user, $price, $balance)
 { 
 	
+	$sql1 = "INSERT INTO purchase_order (`user_id`, `price`, `date`) VALUES ('$user', '$price', now())"; 
+	if (mysqli_query($conn, $sql1)) {
+    $last_id = mysqli_insert_id($conn);
+	$sql2 = "INSERT INTO purchase_transaction (`purchase_id`, `product_id`, `product_name`, `s_price`, `quantity`) 
+	(SELECT '$last_id', product_code, product_name, s_price, quantity FROM cart where user_id = '$user');";
+	$sql3 = "DELETE FROM cart WHERE user_id = '$user';";
+	$sql4 = "UPDATE account SET balance = '$balance' WHERE email = '$user'";
+	$points = $price * 0.1;
+	$sql5 = "UPDATE account SET points = points + '$points' WHERE email = '$user'";
+	$sql_select = "SELECT * FROM cart where user_id = '$user'";
+
+	mysqli_query($conn, $sql2);
 	
+	$result = mysqli_query($conn, $sql_select);
+	if (mysqli_num_rows($result) > 0) {
+    // output data of each row
+    while($row = mysqli_fetch_assoc($result)) {
+		$quan = $row['quantity'];
+		$cod = $row['product_code'];
+		$sql_update = "UPDATE stock SET product_quantity = product_quantity - '$quan' WHERE product_id = '$cod' ";
+		mysqli_query($conn, $sql_update);
+
+	}	
+    }
+	mysqli_query($conn, $sql3);
+		mysqli_query($conn, $sql4);
+				mysqli_query($conn, $sql5);
+} else {
+    echo "Error: " . $sql2 . "<br>" . mysqli_error($conn);
 }
 
+
+	
+}
+// Sabaa
 function login($username, $password, $conn)
 {
     // username and password sent from form 
@@ -139,12 +240,12 @@ function login($username, $password, $conn)
         return $message;
     }
 
-
 }
+// Abdol
 
 function news($conn)
 {
- // username and password sent from form 
+    // username and password sent from form 
     $messages = array();
     $sql      = "SELECT * FROM news ORDER BY date";
     $result   = mysqli_query($conn, $sql);
@@ -155,10 +256,12 @@ function news($conn)
         mysqli_free_result($result);
         return $messages;
     }
+
 }
+// Sabaa
 function accountInfo($username, $conn)
 {
-    // username sent from form 
+    // username and password sent from form 
     $info   = array();
     $sql    = "SELECT * FROM account WHERE email = '$username'";
     $result = mysqli_query($conn, $sql);
@@ -171,11 +274,10 @@ function accountInfo($username, $conn)
     }
 
 }
-
+//abdo
 function pages($conn)
 {
-	
- // username and password sent from form 
+    // username and password sent from form 
     $info   = array();
     $sql    = "SELECT * FROM pages";
     $result = mysqli_query($conn, $sql);
@@ -188,11 +290,23 @@ function pages($conn)
     }
 
 }
+//akber
 function page_info($conn, $pagename)
 {
-
+    // username and password sent from form 
+    $info   = array();
+    $sql    = "SELECT * FROM pages WHERE page_url = '$pagename'";
+    $result = mysqli_query($conn, $sql);
+    if (mysqli_num_rows($result) > 0) {
+        while ($results = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
+            $info["$results[id]"] = $results;
+        }
+        mysqli_free_result($result);
+        return $info;
+    }
 
 }
+// Sabaa and Akber
 function ucp($conn, $type)
 {
     // username and password sent from form 
@@ -210,17 +324,37 @@ function ucp($conn, $type)
 
 }
 
+// David
 function addBalance($conn, $user, $balance) {
 	
-
+$sql = "UPDATE account SET balance = balance + '$balance' WHERE email = '$user'";
+if (mysqli_query($conn, $sql)){
+$result = "Added";
+}else {
+	$result = "Not Added";
+}
+	return $result;
 }
 
+// Subodh
 function redeemPoints($conn, $user, $points) {
 	
 	
+$sql = "UPDATE account SET points = 0 WHERE email = '$user'";	
+$newBalance = $points * 0.05;
+$sql1 = "UPDATE account SET balance = balance + '$newBalance' WHERE email = '$user'";
+mysqli_query($conn, $sql);
+if (mysqli_query($conn, $sql1)){
+$result = "Points Redeemed";
+}else {
+	$result = "Not Added";
+}
+	return $result;
 }
 
+// Abdol
 function promoCode($conn, $user, $code) {
+	
 	
 $sql = "SELECT * FROM promotions WHERE code = '$code'";	
 $result = mysqli_query($conn, $sql);
@@ -242,11 +376,19 @@ $result = "Points Redeemed";
 }else {
 	$result = "Not Added";
 }
-	return $result;	
-	
+	return $result;
 }}
-
+// Akber
 function restock($conn, $code, $quantity) {
+	
+	
+$sql = "UPDATE stock SET product_quantity = product_quantity + '$quantity' WHERE id = '$code'";	
 
+if (mysqli_query($conn, $sql)){
+$result = "Restocked";
+}else {
+	$result = "Error";
+}
+	return $result;
 }
 ?>
